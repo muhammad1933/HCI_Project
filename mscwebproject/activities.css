@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #28a745;
+    /* Vibrant Green */
+    --secondary-color: #ffffff;
+    /* White */
+    --background-color: #d4edda;
+    /* Light Green for background */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    /* Light Green */
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    /* Vibrant Green */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Calendar Styles */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    border: 1px solid #ddd;
+    background-color: var(--secondary-color);
+    /* White */
+}
+
+/* Responsive Grid System */
+@media (max-width: 576px) {
+    .calendar {
+        grid-template-columns: repeat(3, 1fr);
+        /* For small screens, 3 columns */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .calendar {
+        grid-template-columns: repeat(5, 1fr);
+        /* For medium screens, 5 columns */
+    }
+}
+
+@media (min-width: 768px) {
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+        /* For large screens, 7 columns */
+    }
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    /* White */
+    border: 1px solid #ddd;
+    min-height: 100px;
+    position: relative;
+}
+
+.day header {
+    font-weight: bold;
+    color: var(--primary-color);
+    /* Vibrant Green */
+    margin-bottom: 5px;
+}
+
+.event {
+    background-color: var(--primary-color);
+    /* Vibrant Green */
+    color: var(--secondary-color);
+    /* White */
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-top: 5px;
+    text-align: center;
+}

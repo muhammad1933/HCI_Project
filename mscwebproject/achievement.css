@@ -1,0 +1,54 @@
+:root {
+    --primary-color: #28a745;
+    /* Vibrant Green */
+    --secondary-color: #ffffff;
+    /* White */
+    --background-color: #d4edda;
+    /* Light Green for background */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    /* Light Green */
+}
+
+h2 {
+    color: var(--primary-color);
+    /* Vibrant Green */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Carousel Styles */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-caption {
+    background-color: rgba(40, 167, 69, 0.7);
+    /* Semi-transparent vibrant green */
+    color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 576px) {
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+}
